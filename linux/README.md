@@ -7,11 +7,12 @@
 
 *(далее привожу текстовый лог, экспортированный из ssh клиента, поскольку скриншотить все это долго)*
 
+```console
 Authenticating with public key "foxycoder@foxycoder-MaiBook-M"
 
 Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
 
-**root@cv3803183:~#** wget <https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb>
+root@cv3803183:~# wget <https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb>
 
 \--2024-05-20 13:47:17-- <https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb>
 
@@ -39,7 +40,7 @@ mysql-apt-config_0.8.30-1_all.deb 100%\[========================================
 
 2024-05-20 13:47:17 (149 MB/s) - ‘mysql-apt-config_0.8.30-1_all.deb’ saved \[18200/18200\]
 
-**root@cv3803183:~#** sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+root@cv3803183:~# sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
 
 Selecting previously unselected package mysql-apt-config.
 
@@ -51,7 +52,7 @@ Unpacking mysql-apt-config (0.8.30-1) ...
 
 Setting up mysql-apt-config (0.8.30-1) ...
 
-**root@cv3803183:~#** sudo apt update
+root@cv3803183:~# sudo apt update
 
 Hit:1 <http://ru.archive.ubuntu.com/ubuntu> noble InRelease
 
@@ -87,7 +88,7 @@ Reading state information... Done
 
 10 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
-**root@cv3803183:~#** sudo apt install mysql-server mysql-client
+root@cv3803183:~# sudo apt install mysql-server mysql-client
 
 Reading package lists... Done
 
@@ -411,11 +412,11 @@ needrestart is being skipped since dpkg has failed
 
 E: Sub-process /usr/bin/dpkg returned an error code (1)
 
-**root@cv3803183:~#** mysql --version
+root@cv3803183:~# mysql --version
 
 mysql Ver 8.4.0 for Linux on x86_64 (MySQL Community Server - GPL)
 
-**root@cv3803183:~#**  sudo apt purge mysql-server mysql-client
+root@cv3803183:~#  sudo apt purge mysql-server mysql-client
 
 Reading package lists... Done
 
@@ -453,10 +454,11 @@ Removing mysql-client (8.4.0-1ubuntu24.04) ...
 
 Purging configuration files for mysql-community-server (8.4.0-1ubuntu24.04) ...
 
-**root@cv3803183:~#** sudo dpkg -r mysql-apt-config
+root@cv3803183:~# sudo dpkg -r mysql-apt-config
 
 (Reading database ... 67355 files and directories currently installed.)
 
 Removing mysql-apt-config (0.8.30-1) ...
 
-**root@cv3803183:~#**
+root@cv3803183:~#
+```
